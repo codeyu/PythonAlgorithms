@@ -1,5 +1,7 @@
+import sys;
+sys.path.append("$HOME/github/PythonAlgorithms/DataStructures/LinkedListDS");
 
-import Node;
+from LinkedListDS.Node import Node;
 
 class LinkedList(object):
 
@@ -15,7 +17,7 @@ class LinkedList(object):
 
     def insertStart(self, data):
         self.counter += 1;
-        newNode = Node.Node(data);
+        newNode = Node(data);
         if not self.head:
             self.head = newNode;
         else:
@@ -30,7 +32,7 @@ class LinkedList(object):
             self.insertStart(data);
             return;
         self.counter += 1;
-        newNode = Node.Node(data);
+        newNode = Node(data);
         actualNode = self.head;
         while actualNode.nextNode is not None:
             actualNode = actualNode.nextNode;
